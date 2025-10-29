@@ -75,11 +75,11 @@ export default function Footer() {
       </div>
 
       <div className="ig_images_pc">
-        {[...Array(6)].map((_, i) => (
+        {[1, 2, 3, 4, 5, 6].map((num, i) => (
           <div key={i} className="ig_image_wrap">
             <Image 
-              src="/images/telegram-cloud-document-2-5265135433901170160-6.png" 
-              alt={`Instagram ${i + 1}`} 
+              src={`/images/update/ig--image-${num}.webp`}
+              alt={`Instagram ${num}`} 
               className="ig--image"
               width={200}
               height={200}
@@ -93,13 +93,13 @@ export default function Footer() {
           <div className="container-large">
             <div className="swiper">
               <div className="swiper-wrapper">
-                {[...Array(5)].map((_, i) => (
+                {[1, 2, 3, 4, 5, 6].map((num, i) => (
                   <div key={i} className="swiper-slide">
                     <div className="swiper-box">
                       <div className="ig_image_wrap">
                         <Image 
-                          src="/images/telegram-cloud-document-2-5265135433901170160-6.png" 
-                          alt={`Instagram ${i + 1}`} 
+                          src={`/images/update/ig--image-${num}.webp`}
+                          alt={`Instagram ${num}`} 
                           className="ig--image"
                           width={228}
                           height={280}
@@ -148,7 +148,7 @@ export default function Footer() {
             <div className="copyright--text">All rights reserved © 2025</div>
           </div>
           <div id="w-node-_0b914e5f-094d-f32a-c00b-b5085d92cc44-d38e79dd" className="footer--down--links">
-            <div className="company--name">EBANAT FZLS</div>
+            <div className="company--name">EBANAT FZCO</div>
             <Link href="#" className="policy--link">Privacy Policy</Link>
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function Footer() {
             <div className="copyright--text">All rights reserved © 2025</div>
           </div>
           <div className="footer--policy-wrapper">
-            <div className="company--name">EBANAT FZLS</div>
+            <div className="company--name">EBANAT FZCO</div>
             <Link href="#" className="policy--link">Privacy Policy</Link>
           </div>
         </div>

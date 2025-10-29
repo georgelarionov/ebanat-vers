@@ -42,11 +42,11 @@ export default function Product() {
         </div>
 
         <div className="product-images-pc">
-          {[...Array(4)].map((_, i) => (
+          {[1, 2, 3, 4].map((num, i) => (
             <div key={i} className="prodcut-image-wrap">
               <Image 
-                src="/images/11.png" 
-                alt={`Product ${i + 1}`} 
+                src={`/images/update/medusa-product-image-${num}.webp`}
+                alt={`Product ${num}`} 
                 className="medusa-product-image"
                 width={692}
                 height={692}
@@ -59,13 +59,13 @@ export default function Product() {
           <div className="container-large">
             <div className="swiper">
               <div className="swiper-wrapper">
-                {[...Array(4)].map((_, i) => (
+                {[1, 2, 3, 4].map((num, i) => (
                   <div key={i} className="swiper-slide">
                     <div className="swiper-box">
                       <div className="product-image-wrap-mobile">
                         <Image 
-                          src="/images/11.png" 
-                          alt={`Product ${i + 1}`} 
+                          src={`/images/update/medusa-product-image-${num}.webp`}
+                          alt={`Product ${num}`} 
                           className="medusa-product-image"
                           width={692}
                           height={692}

@@ -34,7 +34,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
       }
     },
     exit: { 
-      y: -100, 
+      y: 0, 
       opacity: 0,
       transition: {
         duration: 0.5,
@@ -115,10 +115,10 @@ export default function PageTransition({ children }: { children: React.ReactNode
               exit="exit"
             >
               <Image 
-                src="/images/logo-svg.svg" 
+                src="/images/update/transition-logo.svg" 
                 alt="Logo" 
-                width={120}
-                height={71}
+                width={150}
+                height={89}
                 priority
               />
             </motion.div>

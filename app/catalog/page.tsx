@@ -7,7 +7,7 @@ export default function Catalog() {
     <>
       <div className="catalog-products-hero">
         <Image 
-          src="/images/catalog-img-1.webp" 
+          src="/images/update/catalog-pc-hero-img.webp" 
           alt="Catalog" 
           className="catalog-pc-hero-img"
           fill
@@ -15,7 +15,7 @@ export default function Catalog() {
           sizes="100vw"
         />
         <Image 
-          src="/images/catalog-img-mobile.webp" 
+          src="/images/update/catalog-mobile-hero-img.webp" 
           alt="Catalog Mobile" 
           className="catalog-mobile-hero-img"
           fill

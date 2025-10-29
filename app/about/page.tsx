@@ -7,7 +7,7 @@ export default function About() {
     <>
       <div className="catalog-products-hero">
         <Image 
-          src="/images/pc-about.webp" 
+          src="/images/update/about-pc-hero-img.webp" 
           alt="About" 
           className="catalog-pc-hero-img"
           fill
@@ -15,7 +15,7 @@ export default function About() {
           sizes="100vw"
         />
         <Image 
-          src="/images/mobile-about.webp" 
+          src="/images/update/about-mobile-hero-img.webp" 
           alt="About Mobile" 
           className="catalog-mobile-hero-img"
           fill

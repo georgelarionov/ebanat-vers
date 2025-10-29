@@ -23,30 +23,24 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const text = "MINIMALISTIC ARTEFACTS";
-  const letters = text.split("");
+  const text = "CAST IN STONE";
 
   return (
     <>
       <div className="hero">
         <div className="hero_wrap">
-          <div className="hero--text">
-            {letters.map((letter, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: 1.2 + index * 0.05,
-                  ease: [0.43, 0.13, 0.23, 0.96],
-                }}
-                style={{ display: 'inline-block', whiteSpace: letter === ' ' ? 'pre' : 'normal' }}
-              >
-                {letter}
-              </motion.span>
-            ))}
-          </div>
+          <motion.div 
+            className="hero--text"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+              ease: [0.43, 0.13, 0.23, 0.96],
+            }}
+          >
+            {text}
+          </motion.div>
         </div>
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
@@ -58,7 +52,7 @@ export default function Home() {
           style={{ position: 'absolute', inset: 0 }}
         >
           <Image 
-            src="/images/hero-img.webp" 
+            src="/images/update/hero--bg--img--pc.webp" 
             alt="Hero" 
             className="hero--bg--img--pc"
             fill
@@ -76,7 +70,7 @@ export default function Home() {
           style={{ position: 'absolute', inset: 0 }}
         >
           <Image 
-            src="/images/image-3035-2.png" 
+            src="/images/update/hero--bg--img--mobile.webp" 
             alt="Hero Mobile" 
             className="hero--bg--img--mobile"
             fill
@@ -90,14 +84,16 @@ export default function Home() {
 
       <div className="main_products">
         <div className="main_product_block">
-          <Image 
-            src="/images/hero-block-img-1.webp" 
-            alt="Product 1" 
-            className="hero_block_img"
-            fill
-            sizes="50vw"
-          />
-          <div className="hero_block_text">
+          <TransitionLink href="/product" style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+            <Image 
+              src="/images/update/hero-block-img-1.webp" 
+              alt="Product 1" 
+              className="hero_block_img"
+              fill
+              sizes="50vw"
+            />
+          </TransitionLink>
+          <div className="hero_block_text" style={{ position: 'relative', zIndex: 2 }}>
             <div className="hero_block_text_wrapper">
               <div className="hero--block--text-title">Product name</div>
               <div className="hero--block-text-subtitle">A form with an idea behind it</div>
@@ -113,14 +109,16 @@ export default function Home() {
           </div>
         </div>
         <div className="main_product_block">
-          <Image 
-            src="/images/hero-block-img-2.webp" 
-            alt="Product 2" 
-            className="hero_block_img"
-            fill
-            sizes="50vw"
-          />
-          <div className="hero_block_text">
+          <TransitionLink href="/product" style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+            <Image 
+              src="/images/hero-block-img-2.webp" 
+              alt="Product 2" 
+              className="hero_block_img"
+              fill
+              sizes="50vw"
+            />
+          </TransitionLink>
+          <div className="hero_block_text" style={{ position: 'relative', zIndex: 2 }}>
             <div className="hero_block_text_wrapper">
               <div className="hero--block--text-title">Product name</div>
               <div className="hero--block-text-subtitle">A form with an idea behind it</div>
@@ -164,11 +162,11 @@ export default function Home() {
       <div className="lookbook_main">
         <div className="lookbook_slider_wrap">
           <div className="slider-images-container">
-            {[...Array(totalSlides)].map((_, i) => (
+            {[1, 2, 3, 4, 5].map((num, i) => (
               <Image 
                 key={i}
-                src="/images/Frame-149422-1.png" 
-                alt={`Lookbook ${i + 1}`} 
+                src={`/images/update/slider-image-${num}.webp`}
+                alt={`Lookbook ${num}`} 
                 className={`slider--image ${currentSlide === i ? 'active' : ''} ${prevSlide === i ? 'prev' : ''}`}
                 width={1440}
                 height={960}
@@ -192,11 +190,11 @@ export default function Home() {
             <div className="lookbook--title">Lookbook 2025</div>
           </div>
           <div className="lookbook-small-slider-container">
-            {[...Array(totalSlides)].map((_, i) => (
+            {[1, 2, 3, 4, 5].map((num, i) => (
               <Image 
                 key={i}
-                src="/images/1.png" 
-                alt={`Lookbook detail ${i + 1}`} 
+                src={`/images/update/mini-slider-image-${num}.webp`}
+                alt={`Lookbook detail ${num}`} 
                 className={`lookbook-static--image ${currentSlide === i ? 'active' : ''} ${prevSlide === i ? 'prev' : ''}`}
                 width={300}
                 height={400}
