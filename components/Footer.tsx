@@ -78,7 +78,7 @@ export default function Footer() {
         {[1, 2, 3, 4, 5, 6].map((num, i) => (
           <div key={i} className="ig_image_wrap">
             <Image 
-              src={`/images/update/ig--image-${num}.webp`}
+              src={`/images/update/new-ig--image-${num}.webp`}
               alt={`Instagram ${num}`} 
               className="ig--image"
               width={200}
@@ -98,7 +98,7 @@ export default function Footer() {
                     <div className="swiper-box">
                       <div className="ig_image_wrap">
                         <Image 
-                          src={`/images/update/ig--image-${num}.webp`}
+                          src={`/images/update/new-ig--image-${num}.webp`}
                           alt={`Instagram ${num}`} 
                           className="ig--image"
                           width={228}
