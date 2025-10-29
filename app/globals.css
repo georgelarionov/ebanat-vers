@@ -1323,6 +1323,11 @@ html, body {
 
   .main_products {
     grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .main_product_block {
+    height: 454px;
   }
 
   .hero_block_text {
